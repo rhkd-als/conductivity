@@ -106,7 +106,7 @@ def process_summary_folder(excel, folder_path):
         ws_out.Columns(f"A:{last_c}").AutoFit()
 
         # 차트 생성
-        chart_obj = ws_out.ChartObjects().Add(60, 150, 450, 300)
+        chart_obj = ws_out.ChartObjects().Add(left=60, top=150, width=450, height=300)
         chart = chart_obj.Chart
         chart.ChartType = 74 # xlXYScatterLines
         chart.SetSourceData(chart_range)
