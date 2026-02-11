@@ -148,7 +148,7 @@ def process_summary_folder(excel, folder_path):
             x_range = f"C2:C{last_row_idx}"
 
             ws_out.Range("H1").Value, ws_out.Range("H1").Font.Bold = "kB", True
-            ws_out.Range("H2").Value = 0.086173
+            ws_out.Range("H2").Value = -0.086173
             ws_out.Range("H4").Value, ws_out.Range("H4").Font.Bold = "Slope", True
             # LINEST 함수를 이용해 선형 회귀 기울기 추출
             ws_out.Range("H5").Formula = f"=LINEST({y_range}, {x_range})"
