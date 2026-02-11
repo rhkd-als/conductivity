@@ -97,7 +97,7 @@ def process_summary_folder(excel, folder_path):
         
         # 아레니우스 플롯용 데이터 변환 (온도 -> 절대온도 -> 1000/T -> ln전도도)
         if is_arrhenius:
-            for c, t in enumerate(["temp (℃)", "|temp| (K)", "1000/T", "σ (S/cm)", "ln(σ) (S/cm)"], 1): ws_out.Cells(1, c).Value = t
+            for c, t in enumerate(["temp (℃)", "|temp| (K)", "1000/T (1000/K)", "σ (S/cm)", "ln(σ) (S/cm)"], 1): ws_out.Cells(1, c).Value = t
             for idx, (temp, sigma) in enumerate(extracted, 2):
                 ws_out.Cells(idx, 1).Value = temp
                 ws_out.Cells(idx, 2).Formula = f"=A{idx}+273.15"
